@@ -40,7 +40,7 @@ Function Write-Log{
 .OUTPUTS
    None
 .NOTES
-   This function requires PowerShell 5.0 or later.
+   Revision 1.1 : Arnaud Petitjean - 2025/03/13 - Logfile creating before writing to the log
    
 .COMPONENT
    Logging
