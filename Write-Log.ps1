@@ -101,6 +101,9 @@ OS Architecture          : {6}
 +----------------------------------------------------------------------------------------+
 "@ -f $MyInvocation.PSCommandPath, (Get-Date).toString('yyyy-MM-dd HH:mm:ss'), $env:USERDOMAIN, $env:USERNAME, $env:COMPUTERNAME, $CIM.Caption, $CIM.OSArchitecture
 
+                    # Creating the file and the directory if needed
+                    New-Item -Path $FilePath -ItemType File -Force | Out-Null
+                    # Adding the header to the file
                     Add-Content -Path $FilePath -Value $Text
                 }
 
