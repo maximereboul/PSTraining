@@ -40,7 +40,7 @@ Function Write-Log{
 .OUTPUTS
    None
 .NOTES
-   This function requires PowerShell 5.0 or later.
+   Revision 1.1 : Arnaud Petitjean - 2025/03/13 - Logfile creating before writing to the log
    
 .COMPONENT
    Logging
@@ -101,6 +101,9 @@ OS Architecture          : {6}
 +----------------------------------------------------------------------------------------+
 "@ -f $MyInvocation.PSCommandPath, (Get-Date).toString('yyyy-MM-dd HH:mm:ss'), $env:USERDOMAIN, $env:USERNAME, $env:COMPUTERNAME, $CIM.Caption, $CIM.OSArchitecture
 
+                    # Creating the file and the directory if needed
+                    New-Item -Path $FilePath -ItemType File -Force | Out-Null
+                    # Adding the header to the file
                     Add-Content -Path $FilePath -Value $Text
                 }
 
