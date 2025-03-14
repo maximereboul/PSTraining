@@ -4,3 +4,7 @@ https://www.dropbox.com/t/24x9O0URHgP8JvaT
 
 PS Script Analyzer
 https://www.dropbox.com/t/qMN7WbcKhyOPAkDp
+
+Modules:
+ - posh-git
+ - Pester
