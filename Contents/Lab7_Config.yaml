@@ -1,0 +1,11 @@
+$schema: "https://aka.ms/dscv3/schema.json"
+contentVersion: "1.0.0"
+
+resources:
+  - name: "TestRegistry"
+    type: "Microsoft.Windows/Registry"
+    properties:
+      keyPath: "HKEY_LOCAL_MACHINE\\SOFTWARE\\DSC_Test"
+      valueName: "TestValue"
+      valueData:
+        String: "Hello DSC v3"
